@@ -1,0 +1,22 @@
+{
+  "name": "leafblank",
+  "version": "0.1.0",
+  "description": "Leafblank",
+  "repository": "https://github.com/ggolikov/Leafblank",
+  "main": "index.js",
+  "author": "Grigory Golikov gr.golikov@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "watch": "watchify -v -d example/js/app.js -o example/js/bundle.js",
+    "serve": "serve -p 3001",
+    "start": "npm run watch & npm run serve"
+  },
+  "dependencies": {
+    "leaflet": "^1.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "serve": "^1.4.0",
+    "watchify": "^3.7.0"
+  }
+}

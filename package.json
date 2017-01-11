@@ -8,15 +8,16 @@
   "license": "MIT",
   "scripts": {
     "watch": "watchify -v -d example/js/app.js -o example/js/bundle.js",
-    "serve": "serve -p 3001",
-    "start": "npm run watch & npm run serve"
+    "server": "live-server --port=3001 --host=localhost --open=example --watch=example",
+    "start": "npm-run-all --parallel watch server"
   },
   "dependencies": {
     "leaflet": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
-    "serve": "^1.4.0",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.0.0",
     "watchify": "^3.7.0"
   }
 }

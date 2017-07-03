@@ -7,17 +7,16 @@
   "author": "Grigory Golikov gr.golikov@gmail.com",
   "license": "MIT",
   "scripts": {
-    "watch": "watchify -v -d example/js/app.js -o example/js/bundle.js",
-    "server": "live-server --port=3001 --host=localhost --open=example --watch=example",
-    "start": "npm-run-all --parallel watch server"
+    "start": "webpack-dev-server --inline --hot --content-base example --history-api-fallback",
+    "build": "webpack -w",
+    "deploy": "gh-pages -d example"
   },
   "dependencies": {
     "leaflet": "^1.0.2"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "live-server": "^1.2.0",
-    "npm-run-all": "^4.0.0",
-    "watchify": "^3.7.0"
+    "gh-pages": "^1.0.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }

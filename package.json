@@ -7,17 +7,24 @@
   "author": "Grigory Golikov gr.golikov@gmail.com",
   "license": "MIT",
   "scripts": {
-    "watch": "watchify -v -d example/js/app.js -o example/js/bundle.js",
-    "server": "live-server --port=3001 --host=localhost --open=example --watch=example",
-    "start": "npm-run-all --parallel watch server"
+    "watch": "watchify -v -d demo/js/app.js -o demo/js/bundle.js",
+    "lint": "eslint ./src/",
+    "build-js": "cat ./src/L.Plugin.js > ./dist/Leaflet.plugin-src.js",
+    "compress": "uglifyjs ./dist/Leaflet.plugin-src.js -o ./dist/Leaflet.plugin.js -m --comments",
+    "server": "live-server --port=3001 --host=localhost --open=demo --watch=demo",
+    "start": "npm-run-all --parallel watch server",
+    "deploy": "gh-pages -d demo"
   },
   "dependencies": {
     "leaflet": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
+    "eslint": "^3.14.1",
+    "gh-pages": "^1.0.0",
     "live-server": "^1.2.0",
-    "npm-run-all": "^4.0.0",
+    "npm-run-all": "^4.0.1",
+    "uglifyjs": "^2.4.10",
     "watchify": "^3.7.0"
   }
 }

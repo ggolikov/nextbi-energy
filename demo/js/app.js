@@ -1,4 +1,5 @@
-import Plugin from '../../index.js';
+import 'leaflet';
+import '../../src/L.Plugin.js';
 
 const osm = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
         maxZoom: 18,

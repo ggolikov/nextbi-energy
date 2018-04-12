@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Leafblank",
   "repository": "https://github.com/ggolikov/Leafblank",
-  "main": "index.js",
+  "main": "dist/Leaflet.plugin-src.js",
   "author": "Grigory Golikov gr.golikov@gmail.com",
   "license": "MIT",
   "scripts": {

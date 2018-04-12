@@ -1,5 +1,5 @@
-import 'leaflet';
-import '../../src/L.Plugin.js';
+require('leaflet');
+require('../../src/L.Plugin.js');
 
 const osm = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
         maxZoom: 18,
@@ -9,4 +9,4 @@ const osm = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}
     map = new L.Map('map', {layers: [osm], center: point, zoom: 17, maxZoom: 22}),
     root = document.getElementById('content');
 
-console.log(Plugin);
+console.log(L.Plugin);

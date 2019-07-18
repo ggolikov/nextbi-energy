@@ -1,4 +1,4 @@
-@import'./L.Plugin.css';
+@import'../../src/L.Rain.css';
 
 html, body {
     width: 100%;
@@ -16,11 +16,14 @@ body {
     height: 100%;
     margin: 0;
 }
+
 #left-panel {
-    width: 350px;
+    /* display: none; */
+    width: 300px;
     height: 100%;
     float: left;
 }
+
 #map {
     height: 100%;
 }

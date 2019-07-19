@@ -28,8 +28,9 @@
     ]
   },
   "dependencies": {
+    "glslify": "^6.2.1",
     "leaflet": "^1.4.0",
-    "glslify": "^6.2.1"
+    "leaflet.label": "^0.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
